@@ -1,0 +1,7 @@
+# /bin/sh
+
+xrandr --output HDMI-0 --mode 3840x2160 --output DP-2 --mode 1920x1080 --right-of HDMI-0 &
+picom -f &
+wallset -V /home/petrup/Videos/NissanGTR.mp4 &
+sxhkd &
+dwmblocks &

@@ -1,0 +1,29 @@
+# Printscreen
+
+Print
+  flameshot gui
+
+# Powermenu
+
+super + shift + q
+  /home/petrup/.local/bin/powermenu
+
+# Rofi
+
+super + alt + e  
+  rofi -show emoji
+
+super + alt + c
+  rofi -show calc
+
+# Audio and light
+
+XF86AudioMute
+  pactl set-sink-mute 1 toggle
+
+XF86AudioLowerVolume
+  pactl set-sink-volume 1 -1%
+
+XF86AudioRaiseVolume
+  pactl set-sink-volume 1 +1%
+
