@@ -1,0 +1,7 @@
+# bin/sh
+time="$(date | grep -Eo '[A-Za-z]{3} [A-Za-z]{3} [0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} [A-Za-z]{2}')"
+
+year="$(date | grep -Eo '[0-9]{4}')"
+
+
+echo $year $time

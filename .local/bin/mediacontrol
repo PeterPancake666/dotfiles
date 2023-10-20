@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#status=$(playerctl status)
+#playerctl play-pause $(playerctl -l | head -n 1)
+
+send_notification() {
+  dunstify -a mediacontrol -u low -r 9993 "$1" -t 2000
+}
+
+case "$1" in
+  toggle)
+    playerctl play-pause $(playerctl -l | head -n 1)
+    send_notification $(playerctl status)
+  ;;
+  stop)
+    playerctl stop
+    send_notification "Stopped"
+  ;;
+  next)
+    playerctl next
+    send_notification "Next"
+  ;;
+  previous)
+    playerctl previous
+    send_notification "Previous"
+  ;;
+esac
