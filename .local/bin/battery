@@ -1,0 +1,1 @@
+acpi --battery --details | head -n 1 | cut -c 18-22 | tr -d " "
