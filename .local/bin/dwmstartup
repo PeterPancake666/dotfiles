@@ -1,0 +1,5 @@
+#! /bin/sh
+
+picom -f &
+wallset -V /home/petrup/Videos/NissanGTR.mp4 &
+dwmblocks &
