@@ -2,9 +2,9 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"󰃰 ",      "/home/petrup/.local/bin/timedate",					  1,		              0},
-  {"󰂄 ",      "/home/petrup/.local/bin/battery",             1,                  0},
+  {";󰂄 ",      "/home/petrup/.local/bin/battery",             1,                  0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char delim[] = " | ";
+static char delim[] = " ";
 static unsigned int delimLen = 5;
