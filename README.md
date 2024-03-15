@@ -3,9 +3,9 @@
 This directory contains the dotfiles for my system.
 
 ## Programs
--git
--stow
--zsh
+- git
+- stow
+- zsh
 
 ## Installation 
 
