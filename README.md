@@ -57,3 +57,11 @@ pacman -S tmux
 ```bash
 pacman -S neovim
 ```
+### - Zoxide
+```bash
+pacman -S zoxide
+```
+### - fzf (for zoxide)
+```bash
+pacman -S fzf
+```
