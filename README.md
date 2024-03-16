@@ -57,6 +57,18 @@ pacman -S tmux
 ```bash
 pacman -S neovim
 ```
+### - Rofi
+```bash
+pacman -S rofi
+```
+### - Rofi emoji
+```bash
+pacman -S rofi-emoji
+```
+### - Rofi calculator
+```bash
+pacman -S rofi-calc
+```
 ### - Zoxide
 ```bash
 pacman -S zoxide
@@ -80,4 +92,8 @@ paru -S ripgrep
 ### - Midnight commander
 ```bash
 pacman -S mc
+```
+### - Papirus icons
+```bash
+papirus-icon-theme
 ```
