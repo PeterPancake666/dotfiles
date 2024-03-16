@@ -57,6 +57,10 @@ pacman -S tmux
 ```bash
 pacman -S neovim
 ```
+### - Dunst
+```bash
+pacman -S dunst
+```
 ### - Rofi
 ```bash
 pacman -S rofi
