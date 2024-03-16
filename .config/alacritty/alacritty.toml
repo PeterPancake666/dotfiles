@@ -4,7 +4,7 @@ program="/bin/tmux"
 [window]
 padding={ x=10, y=10 }
 class={ instance="Alacritty", general="Alacritty" }
-opacity=0.9
+opacity=1.0
 
 [font]
 normal={family="JetBrainsMono NF", style="Regular"}
