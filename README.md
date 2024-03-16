@@ -3,9 +3,36 @@
 This directory contains the dotfiles for my system.
 
 ## Programs
-- git
-- stow
-- zsh
+### - git
+
+```bash
+pacman -S git
+```
+
+### - stow
+
+```bash
+pacman -S stow
+```
+
+### - zsh
+
+```bash
+pacman -S zsh
+chsh -s zsh
+```
+
+### - ohmyzsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### - powerlevel10k
+
+```bash
+paru -S zsh-theme-powerlevel10k-git
+```
 
 ## Installation 
 
