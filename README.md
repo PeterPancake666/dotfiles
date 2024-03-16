@@ -41,10 +41,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```bash
 paru -S zsh-theme-powerlevel10k-git
 ```
-### - Jetbrains Mono
-```bash
-paru -S ttf-jetbrains-mono-nerd
-```
 ### - Alacritty
 ```bash
 pacman -S alacritty
@@ -93,6 +89,14 @@ pacman -S exa
 ```bash
 paru -S bat
 ```
+### - Playerctl
+```bash
+pacmani -S playerctl
+```
+### - ACPI
+```bash
+pacman -S acpi
+```
 ### - Ripgrep
 ```bash
 paru -S ripgrep
@@ -104,4 +108,8 @@ pacman -S mc
 ### - Papirus icons
 ```bash
 papirus-icon-theme
+```
+### - Jetbrains Mono
+```bash
+paru -S ttf-jetbrains-mono-nerd
 ```
