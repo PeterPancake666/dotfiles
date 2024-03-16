@@ -1,0 +1,41 @@
+# Printscreen
+
+Print
+  flameshot gui
+
+# Powermenu
+
+super + shift + q
+  /home/petrup/.local/bin/powermenu
+
+# Rofi
+
+super + alt + e  
+  rofi -show emoji
+
+super + alt + c
+  rofi -show calc
+
+# Audio and media
+
+XF86AudioMute
+  /home/petrup/.local/bin/changevolume mute
+
+XF86AudioLowerVolume
+  /home/petrup/.local/bin/changevolume down
+
+XF86AudioRaiseVolume
+  /home/petrup/.local/bin/changevolume up
+
+XF86AudioPlay
+  /home/petrup/.local/bin/mediacontrol toggle
+
+XF86AudioNext
+  /home/petrup/.local/bin/mediacontrol next
+
+XF86AudioPrev
+  /home/petrup/.local/bin/mediacontrol previous
+
+XF86AudioStop
+  /home/petrup/.local/bin/mediacontrol stop
+

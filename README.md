@@ -73,6 +73,10 @@ pacman -S rofi-emoji
 ```bash
 pacman -S rofi-calc
 ```
+### Sxhkd
+```bash
+pacman -S sxhkd
+```
 ### - Zoxide
 ```bash
 pacman -S zoxide
