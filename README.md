@@ -65,3 +65,19 @@ pacman -S zoxide
 ```bash
 pacman -S fzf
 ```
+### - Exa
+```bash
+pacman -S exa
+```
+### - Bat
+```bash
+paru -S bat
+```
+### - Ripgrep
+```bash
+paru -S ripgrep
+```
+### - Midnight commander
+```bash
+pacman -S mc
+```
