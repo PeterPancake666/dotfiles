@@ -86,12 +86,12 @@ pacman -S exa
 
 ### - Bat (better cat)
 ```bash
-paru -S bat
+pacman -S bat
 ```
 
 ### - Ripgrep (better grep)
 ```bash
-paru -S ripgrep
+pacman -S ripgrep
 ```
 
 ### - Midnight commander (terminal file manger)
