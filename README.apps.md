@@ -2,6 +2,11 @@
 
 ## Necesary apps
 
+### - Qtile (WM)
+```bash
+pacman -S qtile
+```
+
 ### - Alacritty (Terminal)
 ```bash
 pacman -S alacritty
