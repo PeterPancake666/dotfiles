@@ -1,14 +1,14 @@
 #!/bin/sh
 
-# Power menu script using tofi
+# Power menu script using rofi
 
-CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | tofi --config "$HOME"/.config/tofi/powermenu-config)
+CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | rofi -dmenu -i -theme-str '@import "power.rasi"')
 
 case "$CHOSEN" in
 	"Lock") lockscreen ;;
 	"Suspend") systemctl suspend-then-hibernate ;;
 	"Reboot") reboot ;;
 	"Shutdown") poweroff ;;
-	"Log Out") hyprctl dispatch exit ;;
+	"Log Out") logout ;;
 	*) exit 1 ;;
 esac
