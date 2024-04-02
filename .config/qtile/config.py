@@ -39,6 +39,8 @@ keys = [
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
+
+
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
@@ -77,7 +79,7 @@ keys = [
     ),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "shift"], "q", lazy.spawn("/home/petrup/.local/bin/powermenu"), desc="Shutdown Qtile"),
+    #Key([mod, "shift"], "q", lazy.spawn("/home/petrup/.local/bin/powermenu"), desc="Shutdown Qtile"),
     Key([mod], "p", lazy.spawn(rofi), desc="Spawn a command using a prompt widget"),
 ]
 
@@ -125,14 +127,21 @@ for i in groups:
         ]
     )
 
+layout_theme = {
+    "border_width": 3,
+    "margin": 15,
+    "border_focus": "FFFFFF"
+    "border_normal": "CCCCCC"
+}
+
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    layout.Max(),
+    #layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    #layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    # layout.MonadTall(),
+    layout.MonadTall(border_width=3, margin=15, border_focus="FFFFFF", border_normal="CCCCCC"),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -164,9 +173,9 @@ screens = [
                 ),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
-                widget.BatteryIcon(),
-                widget.Battery(),
-                widget.Volume(),
+                widget.BatteryIcon(update_interval=0.1),
+                widget.Battery(update_interval=0.1, charge_char="󱐋", discharge_char="", not_charging_char=""),
+                widget.Volume(fmt='󱄠 {}'),
                 widget.Clock(format="%Y-%m-%d %a %H:%M:%S"),
                 widget.Systray(),
             ],

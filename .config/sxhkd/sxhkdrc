@@ -19,13 +19,13 @@ super + alt + c
 # Audio and media
 
 XF86AudioMute
-  /home/petrup/.local/bin/changevolume mute
+  /home/petrup/.local/bin/volume mute
 
 XF86AudioLowerVolume
-  /home/petrup/.local/bin/changevolume down
+  /home/petrup/.local/bin/volume down
 
 XF86AudioRaiseVolume
-  /home/petrup/.local/bin/changevolume up
+  /home/petrup/.local/bin/volume up
 
 XF86AudioPlay
   /home/petrup/.local/bin/mediacontrol toggle
