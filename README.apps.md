@@ -116,7 +116,7 @@ pacman -S acpi
 pacman -S network-manager-applet
 ```
 
-## Icons and fonts
+## Themes
 
 ### - Papirus icons
 ```bash
@@ -127,3 +127,4 @@ pacman -S papirus-icon-theme
 ```bash
 paru -S ttf-jetbrains-mono-nerd
 ```
+
