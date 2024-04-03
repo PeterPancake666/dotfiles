@@ -25,6 +25,11 @@ pacman -S tmux
 pacman -S neovim
 ```
 
+### - Flameshot (screenshots)
+```bash
+pacman -S flameshot
+```
+
 ## zsh
 
 ### - zsh (shell)
@@ -137,6 +142,11 @@ pacman -S picom
 ### - betterlockscreen
 ```bash
 pacman -S betterlockscreen
+```
+
+### - brillo
+```bash
+paru -S brillo
 ```
 
 ## Themes

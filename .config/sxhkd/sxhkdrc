@@ -39,3 +39,11 @@ XF86AudioPrev
 XF86AudioStop
   /home/petrup/.local/bin/mediacontrol stop
 
+
+# Backlight
+
+XF86MonBrightnessUp
+  /home/petrup/.local/bin/backlight up
+
+XF86MonBrightnessDown
+  /home/petrup/.local/bin/backlight down
