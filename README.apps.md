@@ -50,6 +50,11 @@ pacman -S dunst
 pacman -S sxhkd
 ```
 
+### Variety ()
+```bash
+pacman -S variety
+```
+
 ## Rofi
 
 ### - Rofi (dmenu alternative)
@@ -99,6 +104,11 @@ pacman -S ripgrep
 pacman -S mc
 ```
 
+### - Arandr (xrandr gui)
+```bash
+pacman -S arandr
+```
+
 ## For scripts
 
 ### - Playerctl
@@ -116,6 +126,16 @@ pacman -S acpi
 pacman -S network-manager-applet
 ```
 
+### - picom
+```bash
+pacman -S picom
+```
+
+### - betterlockscreen
+```bash
+pacman -S betterlockscreen
+```
+
 ## Themes
 
 ### - Papirus icons
@@ -128,3 +148,22 @@ pacman -S papirus-icon-theme
 paru -S ttf-jetbrains-mono-nerd
 ```
 
+### - Catppuccin alacritty theme
+```bash
+curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+```
+
+### - Bibata cursor theme
+```bash
+paru -S bibata-cursor-theme
+```
+
+### - Adapta theme
+```bash
+paru -S adapta-gtk-theme-git
+```
+
+### Lxappearance
+```bash
+sudo pacman -S lxappearance
+```
