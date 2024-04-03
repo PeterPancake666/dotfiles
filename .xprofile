@@ -1,0 +1,6 @@
+#!/bin/sh
+$HOME/.screenlayout/xrandr.sh &
+picom -f &
+sxhkd &
+nm-applet &
+variety &

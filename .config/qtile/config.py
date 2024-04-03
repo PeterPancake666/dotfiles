@@ -24,10 +24,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import bar, layout, qtile, widget
+import os
+import subprocess
+from libqtile import bar, layout, widget, hook, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
 
 mod = "mod4"
 terminal = "alacritty"
@@ -128,23 +132,23 @@ for i in groups:
     )
 
 layout_theme = {
-    "border_width": 3,
-    "margin": 15,
-    "border_focus": "FFFFFF"
-    "border_normal": "CCCCCC"
+    "border_width":2,
+    "margin":15,
+    "border_focus":"FFFFFF", 
+    "border_normal":"CCCCCC",
 }
 
-layouts = [
+layouts = [ 
     #layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
     #layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(border_width=3, margin=15, border_focus="FFFFFF", border_normal="CCCCCC"),
+    layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
-    # layout.Tile(),
+    #layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
@@ -161,32 +165,149 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
+                 widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#4c566a",
+                    background = "#2e3440"
                 ),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.BatteryIcon(update_interval=0.1),
-                widget.Battery(update_interval=0.1, charge_char="󱐋", discharge_char="", not_charging_char=""),
-                widget.Volume(fmt='󱄠 {}'),
-                widget.Clock(format="%Y-%m-%d %a %H:%M:%S"),
-                widget.Systray(),
+                widget.GroupBox(
+                    font = "JetBrains Mono Nerd Font Bold",
+                    fontsize = 12,
+                    margin_y = 2,
+                    margin_x = 3,
+                    padding_y = 2,
+                    padding_x = 3,
+                    borderwidth = 0,
+                    disable_drag = True,
+                    active = "#4c566a",
+                    inactive = "#818589",
+                    rounded = False,
+                    highlight_method = "text",
+                    this_current_screen_border = "#d8dee9",
+                    foreground = "#4c566a",
+                    background = "#2e3440"
+                ),
+                 widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#4c566a",
+                    background = "#2e3440"
+                ),
+                widget.Prompt(
+                    font = "Jetbrains Mono Nerd Font",
+                    fontsize = 12,
+                    background = "#2e3440",
+                    foreground = "#d8dee9"
+                ),
+                widget.WindowName(
+                    font = "Jetbrains Mono Nerd Font Bold",
+                    fontsize = 12,
+                    foreground = "#d8dee9",
+                    background = "#2e3440"
+                    ),
+                widget.Sep(
+                    foreground = "#4c566a",
+                    background = "#2e3440",
+                    padding = 5,
+                    linewidth = 1
+                    ),
+                widget.Net(
+                    foreground = "#2e3440",
+                    background = "#2e3440",
+                    font = 'Jetbrains Mono Nerd Font Bold',
+                    fontsize = 12,
+                    format = '{down} ↓↑ {up}',
+                    decorations = [
+                        RectDecoration (
+                            colour = "#ebcb8b",
+                            padding_y = 3,
+                            radius = 2,
+                            filled = True
+                            ),
+                        ],
+                        ),
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#4c566a",
+                    background = "#2e3440"
+                    ),
+                widget.CPU(
+                    background = "#2e3440",
+                    foreground = "#2e3440",
+                    font = "Jetbrains Mono Nerd Font Bold",
+                    fontsize = 12,
+                    decorations = [
+                        RectDecoration (
+                            colour = "#FF5733",
+                            padding_y = 3,
+                            radius = 2,
+                            filled = True
+                        ),
+                    ],),
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "4c566a",
+                    background = "#2e3440"
+                    ),
+                widget.Memory(
+                    measure_mem = 'G',
+                    foreground = "#2e3440",
+                    background = "#2e3440",
+                    font = "Jetbrains Mono Nerd Font Bold",
+                    fontsize = 12,
+                    format = 'RAM{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
+                    decorations = [
+                        RectDecoration (
+                            colour = "#50C878",
+                            padding_y = 3,
+                            radius = 2,
+                            filled = True
+                        ),
+                    ],),
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#4c566a",
+                    background = "#2e3440"
+                    ),
+                widget.Clock(
+                    foreground = "#2e3440",
+                    background = "#2e3440",
+                    font = "Jetbrains Mono Nerd Font Bold",
+                    fontsize = 12,
+                    format = "%D %H:%M",
+                    decorations = [
+                        RectDecoration (
+                            colour = "#81a1c1",
+                            padding_y = 3,
+                            radius = 2,
+                            filled = True
+                        ),
+                    ],),
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#4c566a",
+                    background = "#2e3440"
+                    ),
+                widget.Systray(
+                    background = "#2e3440",
+                    icon_size = 20,
+                    padding = 5,
+                    ),
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#4c566a",
+                    background = "#2e3440"
+                    ),
             ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            # Sets bar height
+           24,
         ),
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
-        # x11_drag_polling_rate = 60,
     ),
 ]
 

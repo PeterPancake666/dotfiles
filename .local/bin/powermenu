@@ -9,6 +9,6 @@ case "$CHOSEN" in
 	"Suspend") systemctl suspend-then-hibernate ;;
 	"Reboot") reboot ;;
 	"Shutdown") poweroff ;;
-	"Log Out") logout ;;
+	"Log Out") pkill -u $USER ;;
 	*) exit 1 ;;
 esac

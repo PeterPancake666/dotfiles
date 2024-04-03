@@ -12,14 +12,14 @@ program="/bin/tmux"
 [window]
 padding={ x=10, y=10 }
 class={ instance="Alacritty", general="Alacritty" }
-opacity=1.0
+opacity=0.9
 
 [font]
 normal={family="JetBrainsMono NF", style="Regular"}
 bold={family="JetBrainsMono NF", style="Bold"}
 italic={family="JetBrainsMono NF", style="Italic"}
 bold_italic={family="JetBrainsMono NF", style="Bold Italic"}
-size=14
+size=11
 
 [selection]
 save_to_clipboard=true
