@@ -5,6 +5,9 @@
 ### - Qtile (WM)
 ```bash
 pacman -S qtile
+pacman -S qtile-extra
+:q
+:q
 ```
 
 ### - Alacritty (Terminal)
