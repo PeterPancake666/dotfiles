@@ -46,6 +46,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 paru -S zsh-theme-powerlevel9k-git
 ```
 
+### - zsh syntax highlighting
+```bash
+paru -S zsh-syntax-highlighting-git
+```
+
 ## Backround programs
 
 ### - Dunst (notifications)

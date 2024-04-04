@@ -114,9 +114,9 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 eval "$(zoxide init --cmd cd zsh)"
 
-alias ls="exa"
-alias ll="exa -lah"
-alias tree="exa --tree"
+alias ls="exa --icons"
+alias ll="exa -lah --icons"
+alias tree="exa --tree --icons"
 alias cat="bat"
 alias grep="rg"
 alias rm="rm -rf"
@@ -124,3 +124,4 @@ alias cls="clear"
 alias vi="nvim"
 alias fm="mc"
 
+source /home/petrup/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
