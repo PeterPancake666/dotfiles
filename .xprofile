@@ -4,3 +4,4 @@ picom -f &
 sxhkd &
 nm-applet &
 variety &
+xautolock -time 30 -locker 'betterlockscreen -l dim' &
