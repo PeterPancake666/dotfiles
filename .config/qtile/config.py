@@ -134,18 +134,18 @@ for i in groups:
 layout_theme = {
     "border_width":2,
     "margin":15,
-    "border_focus":"FFFFFF", 
+    "border_focus":"FFFFFF",
     "border_normal":"CCCCCC",
 }
 
 layouts = [ 
-    #layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    #layout.Max(),
+    layout.MonadTall(**layout_theme),
+    #layout.Columns(),
+    layout.Max(**layout_theme),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
     #layout.Tile(),
@@ -165,6 +165,18 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#4c566a",
+                    background = "#2e3440"
+                ),
+                widget.CurrentLayoutIcon(
+                    padding = 4,
+                    scale = 0.7,
+                    foreground = "#d8dee9",
+                    background = "#2e3440"
+                ),
                  widget.Sep(
                     linewidth = 1,
                     padding = 5,
