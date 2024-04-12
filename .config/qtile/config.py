@@ -168,20 +168,20 @@ screens = [
                 widget.Sep(
                     linewidth = 1,
                     padding = 5,
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                 ),
                 widget.CurrentLayoutIcon(
                     padding = 4,
                     scale = 0.7,
-                    foreground = "#d8dee9",
-                    background = "#2e3440"
+                    foreground = "#cdd6f4",
+                    background = "#1e1e2e"
                 ),
                  widget.Sep(
                     linewidth = 1,
                     padding = 5,
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                 ),
                 widget.GroupBox(
                     font = "JetBrains Mono Nerd Font Bold",
@@ -192,47 +192,47 @@ screens = [
                     padding_x = 3,
                     borderwidth = 0,
                     disable_drag = True,
-                    active = "#4c566a",
-                    inactive = "#818589",
+                    active = "#6c7086",
+                    inactive = "#313244",
                     rounded = False,
                     highlight_method = "text",
-                    this_current_screen_border = "#d8dee9",
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    this_current_screen_border = "#cdd6f4",
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                 ),
                  widget.Sep(
                     linewidth = 1,
                     padding = 5,
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                 ),
                 widget.Prompt(
                     font = "Jetbrains Mono Nerd Font",
                     fontsize = 12,
-                    background = "#2e3440",
-                    foreground = "#d8dee9"
+                    background = "#1e1e2e",
+                    foreground = "#cdd6f4"
                 ),
                 widget.WindowName(
                     font = "Jetbrains Mono Nerd Font Bold",
                     fontsize = 12,
-                    foreground = "#d8dee9",
-                    background = "#2e3440"
+                    foreground = "#cdd6f4",
+                    background = "#1e1e2e"
                     ),
                 widget.Sep(
-                    foreground = "#4c566a",
-                    background = "#2e3440",
+                    foreground = "#45475a",
+                    background = "#1e1e2e",
                     padding = 5,
                     linewidth = 1
                     ),
                 widget.Net(
-                    foreground = "#2e3440",
-                    background = "#2e3440",
+                    foreground = "#181825",
+                    background = "#1e1e2e",
                     font = 'Jetbrains Mono Nerd Font Bold',
                     fontsize = 12,
                     format = '{down} ↓↑ {up}',
                     decorations = [
                         RectDecoration (
-                            colour = "#ebcb8b",
+                            colour = "#cba6f7",
                             padding_y = 3,
                             radius = 2,
                             filled = True
@@ -242,17 +242,17 @@ screens = [
                 widget.Sep(
                     linewidth = 1,
                     padding = 5,
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                     ),
                 widget.CPU(
-                    background = "#2e3440",
-                    foreground = "#2e3440",
+                    background = "#1e1e2e",
+                    foreground = "#181825",
                     font = "Jetbrains Mono Nerd Font Bold",
                     fontsize = 12,
                     decorations = [
                         RectDecoration (
-                            colour = "#FF5733",
+                            colour = "#f38ba8",
                             padding_y = 3,
                             radius = 2,
                             filled = True
@@ -262,18 +262,18 @@ screens = [
                     linewidth = 1,
                     padding = 5,
                     foreground = "4c566a",
-                    background = "#2e3440"
+                    background = "#1e1e2e"
                     ),
                 widget.Memory(
                     measure_mem = 'G',
-                    foreground = "#2e3440",
-                    background = "#2e3440",
+                    foreground = "#181825",
+                    background = "#1e1e2e",
                     font = "Jetbrains Mono Nerd Font Bold",
                     fontsize = 12,
                     format = 'RAM{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
                     decorations = [
                         RectDecoration (
-                            colour = "#50C878",
+                            colour = "#fab387",
                             padding_y = 3,
                             radius = 2,
                             filled = True
@@ -282,18 +282,18 @@ screens = [
                 widget.Sep(
                     linewidth = 1,
                     padding = 5,
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                     ),
                 widget.Clock(
-                    foreground = "#2e3440",
-                    background = "#2e3440",
+                    foreground = "#181825",
+                    background = "#1e1e2e",
                     font = "Jetbrains Mono Nerd Font Bold",
                     fontsize = 12,
                     format = "%D %H:%M",
                     decorations = [
                         RectDecoration (
-                            colour = "#81a1c1",
+                            colour = "#89b4fa",
                             padding_y = 3,
                             radius = 2,
                             filled = True
@@ -302,19 +302,42 @@ screens = [
                 widget.Sep(
                     linewidth = 1,
                     padding = 5,
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
+                    ),
+                widget.Battery(
+                     foreground = "#181825",
+                    background = "#1e1e2e",
+                    font = "Jetbrains Mono Nerd Font Bold",
+                    fontsize = 12,
+                    charge_char = "󱐋",
+                    discharge_char = "",
+                    not_charging_char = "󰚥",
+                    format = "{char}{percent: 2.0%}",
+                    decorations = [
+                        RectDecoration (
+                            colour = "#a6e3a1",
+                            padding_y = 3,
+                            radius = 2,
+                            filled = True
+                        ),
+                    ],),
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                     ),
                 widget.Systray(
-                    background = "#2e3440",
+                    background = "#1e1e2e",
                     icon_size = 20,
                     padding = 5,
                     ),
                 widget.Sep(
                     linewidth = 1,
                     padding = 5,
-                    foreground = "#4c566a",
-                    background = "#2e3440"
+                    foreground = "#45475a",
+                    background = "#1e1e2e"
                     ),
             ],
             # Sets bar height
