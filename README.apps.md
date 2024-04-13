@@ -61,7 +61,7 @@ pacman -S dunst
 pacman -S sxhkd
 ```
 
-### Variety ()
+### Variety (wallpaper manager)
 ```bash
 pacman -S variety
 ```
