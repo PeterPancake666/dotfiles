@@ -161,196 +161,205 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [
-    Screen(
-        top=bar.Bar(
-            [
-                widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                ),
-                widget.CurrentLayoutIcon(
-                    padding = 4,
-                    scale = 0.7,
-                    foreground = "#cdd6f4",
-                    background = "#1e1e2e"
-                ),
-                 widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                ),
-                widget.GroupBox(
-                    font = "JetBrains Mono Nerd Font Bold",
-                    fontsize = 12,
-                    margin_y = 2,
-                    margin_x = 3,
-                    padding_y = 2,
-                    padding_x = 3,
-                    borderwidth = 0,
-                    disable_drag = True,
-                    active = "#6c7086",
-                    inactive = "#313244",
-                    rounded = False,
-                    highlight_method = "text",
-                    this_current_screen_border = "#cdd6f4",
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                ),
-                 widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                ),
-                widget.Prompt(
-                    font = "Jetbrains Mono Nerd Font",
-                    fontsize = 12,
-                    background = "#1e1e2e",
-                    foreground = "#cdd6f4"
-                ),
-                widget.WindowName(
-                    font = "Jetbrains Mono Nerd Font Bold",
-                    fontsize = 12,
-                    foreground = "#cdd6f4",
-                    background = "#1e1e2e"
-                    ),
-                widget.Sep(
-                    foreground = "#45475a",
-                    background = "#1e1e2e",
-                    padding = 5,
-                    linewidth = 1
-                    ),
-                widget.Net(
-                    foreground = "#181825",
-                    background = "#1e1e2e",
-                    font = 'Jetbrains Mono Nerd Font Bold',
-                    fontsize = 12,
-                    format = '{down} ↓↑ {up}',
-                    decorations = [
-                        RectDecoration (
-                            colour = "#cba6f7",
-                            padding_y = 3,
-                            radius = 2,
-                            filled = True
-                            ),
-                        ],
-                        ),
-                widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                    ),
-                widget.CPU(
-                    background = "#1e1e2e",
-                    foreground = "#181825",
-                    font = "Jetbrains Mono Nerd Font Bold",
-                    fontsize = 12,
-                    decorations = [
-                        RectDecoration (
-                            colour = "#f38ba8",
-                            padding_y = 3,
-                            radius = 2,
-                            filled = True
-                        ),
-                    ],),
-                widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "4c566a",
-                    background = "#1e1e2e"
-                    ),
-                widget.Memory(
-                    measure_mem = 'G',
-                    foreground = "#181825",
-                    background = "#1e1e2e",
-                    font = "Jetbrains Mono Nerd Font Bold",
-                    fontsize = 12,
-                    format = 'RAM{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
-                    decorations = [
-                        RectDecoration (
-                            colour = "#fab387",
-                            padding_y = 3,
-                            radius = 2,
-                            filled = True
-                        ),
-                    ],),
-                widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                    ),
-                widget.Clock(
-                    foreground = "#181825",
-                    background = "#1e1e2e",
-                    font = "Jetbrains Mono Nerd Font Bold",
-                    fontsize = 12,
-                    format = "%D %H:%M",
-                    decorations = [
-                        RectDecoration (
-                            colour = "#89b4fa",
-                            padding_y = 3,
-                            radius = 2,
-                            filled = True
-                        ),
-                    ],),
-                widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                    ),
-                widget.Battery(
-                     foreground = "#181825",
-                    background = "#1e1e2e",
-                    font = "Jetbrains Mono Nerd Font Bold",
-                    fontsize = 12,
-                    charge_char = "󱐋",
-                    discharge_char = "",
-                    not_charging_char = "󰚥",
-                    format = "{char}{percent: 2.0%}",
-                    decorations = [
-                        RectDecoration (
-                            colour = "#a6e3a1",
-                            padding_y = 3,
-                            radius = 2,
-                            filled = True
-                        ),
-                    ],),
-                widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                    ),
-                widget.Systray(
-                    background = "#1e1e2e",
-                    icon_size = 20,
-                    padding = 5,
-                    ),
-                widget.Sep(
-                    linewidth = 1,
-                    padding = 5,
-                    foreground = "#45475a",
-                    background = "#1e1e2e"
-                    ),
-            ],
-            # Sets bar height
-           24,
-        ),
+### WIDGETS LEFT ###
+
+p_widgets_left = [
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.CurrentLayoutIcon(
+        padding = 4,
+        scale = 0.7,
+        foreground = "#cdd6f4",
+        background = "#1e1e2e"
+    ),
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.GroupBox(
+        font = "JetBrains Mono Nerd Font Bold",
+        fontsize = 12,
+        margin_y = 2,
+        margin_x = 3,
+        padding_y = 2,
+        padding_x = 3,
+        borderwidth = 0,
+        disable_drag = True,
+        active = "#6c7086",
+        inactive = "#313244",
+        rounded = False,
+        highlight_method = "text",
+        this_current_screen_border = "#cdd6f4",
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.Prompt(
+        font = "Jetbrains Mono Nerd Font",
+        fontsize = 12,
+        background = "#1e1e2e",
+        foreground = "#cdd6f4"
+    ),
+    widget.WindowName(
+        font = "Jetbrains Mono Nerd Font Bold",
+        fontsize = 12,
+        foreground = "#cdd6f4",
+        background = "#1e1e2e"
+    ),]
+
+### WIDGETS RIGHT ###
+
+p_widgets_right = [
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.Clock(
+        foreground = "#181825",
+        background = "#1e1e2e",
+        font = "Jetbrains Mono Nerd Font Bold",
+        fontsize = 12,
+        format = "%d/%m/%y %H:%M:%S",
+        decorations = [
+            RectDecoration (
+                colour = "#89b4fa",
+                padding_y = 3,
+                radius = 2,
+                filled = True
+            ),
+        ],),
+
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.Systray(
+        background = "#1e1e2e",
+        icon_size = 20,
+        padding = 5,
+    ),
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
     ),
 ]
 
-# Drag floating layouts.
-mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front()),
+### SECONDARY WIDGETS ###
+
+secondary_widgets = [
+    widget.Sep(
+        foreground = "#45475a",
+        background = "#1e1e2e",
+        padding = 5,
+        linewidth = 1
+    ),
+    widget.Net(
+        foreground = "#181825",
+        background = "#1e1e2e",
+        font = 'Jetbrains Mono Nerd Font Bold',
+        fontsize = 12,
+        format = '{down} ↓↑ {up}',
+        decorations = [
+            RectDecoration (
+                colour = "#cba6f7",
+                padding_y = 3,
+                radius = 2,
+                filled = True
+            ),
+        ],
+    ),
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.CPU(
+        background = "#1e1e2e",
+        foreground = "#181825",
+        font = "Jetbrains Mono Nerd Font Bold",
+        fontsize = 12,
+        decorations = [
+            RectDecoration (
+                colour = "#f38ba8",
+                padding_y = 3,
+                radius = 2,
+                filled = True
+            ),
+        ],),
+    widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "4c566a",
+        background = "#1e1e2e"
+    ),
+    widget.Memory(
+        measure_mem = 'G',
+        foreground = "#181825",
+        background = "#1e1e2e",
+        font = "Jetbrains Mono Nerd Font Bold",
+        fontsize = 12,
+        format = 'RAM{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}',
+        decorations = [
+            RectDecoration (
+                colour = "#fab387",
+                padding_y = 3,
+                radius = 2,
+                filled = True
+            ),
+        ],),
+        widget.Sep(
+        linewidth = 1,
+        padding = 5,
+        foreground = "#45475a",
+        background = "#1e1e2e"
+    ),
+    widget.Battery(
+        foreground = "#181825",
+        background = "#1e1e2e",
+        font = "Jetbrains Mono Nerd Font Bold",
+        fontsize = 12,
+        charge_char = "󱐋",
+        discharge_char = "",
+        not_charging_char = "󰚥",
+        format = "{char}{percent: 2.0%}",
+        update_interval = 1,
+        decorations = [
+            RectDecoration (
+                colour = "#a6e3a1",
+                padding_y = 3,
+                radius = 2,
+                filled = True
+            ),
+        ],),
+]
+
+primary_widgets = p_widgets_left + p_widgets_right
+
+def status_bar(widgets):
+    return bar.Bar(widgets, 28, opacity=0.75)
+
+screens = [
+    Screen(
+        bottom=status_bar(p_widgets_left + secondary_widgets + p_widgets_right),
+    ),
 ]
 
 dgroups_key_binder = None

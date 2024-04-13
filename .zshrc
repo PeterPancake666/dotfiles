@@ -122,6 +122,5 @@ alias grep="rg"
 alias rm="rm -rf"
 alias cls="clear"
 alias vi="nvim"
-alias fm="mc"
 
 source /home/petrup/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
