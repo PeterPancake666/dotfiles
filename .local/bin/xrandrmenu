@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Xrandr menu script using rofi
+
+CHOSEN=$(printf "Default\nMulti monitor\n" | rofi -dmenu -i -theme-str '@import "xrandr.rasi"')
+
+reset_wp() {
+  pkill variety
+  sleep 1
+  variety &
+}
+
+case "$CHOSEN" in
+  "Default")  
+    xrandr --output DP-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal 
+    reset_wp
+    ;;
+  "Multi monitor") 
+    xrandr --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --mode 1920x1080 --pos 1920x0 --rotate normal 
+    reset_wp 
+    ;;
+	*) exit 1 ;;
+esac

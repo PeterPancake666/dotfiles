@@ -7,3 +7,10 @@
 [user]
 	email = petrupaun55@gmail.com
 	name = PeterPancake695
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = master

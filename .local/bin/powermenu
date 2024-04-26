@@ -9,6 +9,9 @@ case "$CHOSEN" in
 	"Suspend") systemctl suspend-then-hibernate ;;
 	"Reboot") reboot ;;
 	"Shutdown") poweroff ;;
-	"Log Out") pkill -u $USER ;;
+	"Log Out") 
+    session=`loginctl session-status | head -n 1 | awk '{print $1}'`
+    loginctl terminate-session $session
+    ;;
 	*) exit 1 ;;
 esac

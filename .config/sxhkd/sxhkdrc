@@ -8,6 +8,11 @@ Print
 super + shift + q
   /home/petrup/.local/bin/powermenu
 
+# xrandrmenu
+
+super + shift + m
+  /home/petrup/.local/bin/xrandrmenu
+
 # Rofi
 
 super + alt + e  

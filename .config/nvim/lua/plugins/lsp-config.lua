@@ -12,6 +12,7 @@ return {
         ensure_installed = {
           "clangd",
           "lua_ls",
+          "glsl_analyzer",
         },
       })
     end,
@@ -25,6 +26,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.clangd.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.glsl_analyzer.setup({
         capabilities = capabilities,
       })
       lspconfig.pyright.setup({
