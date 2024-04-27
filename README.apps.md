@@ -39,14 +39,15 @@ chsh -s zsh
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-### - powerlevel9k (ohmyzsh theme)
+### - powerlevel10k (ohmyzsh theme)
 ```bash
-paru -S zsh-theme-powerlevel9k-git
+paru -S zsh-theme-powerlevel10k-git
 ```
 
 ### - zsh syntax highlighting
 ```bash
-paru -S zsh-syntax-highlighting-git
+# in ~ directory
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ```
 
 ## Backround programs
@@ -127,11 +128,6 @@ pacman -S arandr
 pacmani -S playerctl
 ```
 
-### - ACPI (battery cli)
-```bash
-pacman -S acpi
-```
-
 ### - nm-applet (for network manager)
 ```bash
 pacman -S network-manager-applet
@@ -144,7 +140,7 @@ pacman -S picom
 
 ### - betterlockscreen
 ```bash
-pacman -S betterlockscreen
+paru -S betterlockscreen
 ```
 
 ### - brillo
@@ -164,11 +160,6 @@ pacman -S papirus-icon-theme
 paru -S ttf-jetbrains-mono-nerd
 ```
 
-### - Catppuccin alacritty theme
-```bash
-curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
-```
-
 ### - Bibata cursor theme
 ```bash
 paru -S bibata-cursor-theme
@@ -176,7 +167,7 @@ paru -S bibata-cursor-theme
 
 ### - Adapta theme
 ```bash
-paru -S adapta-gtk-theme-git
+paru -S adapta-gtk-theme
 ```
 
 ### Lxappearance
